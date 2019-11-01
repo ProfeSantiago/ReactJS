@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <head>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.10.2/umd/react.production.min.js" crossorigin></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.10.2/umd/react-dom.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.10.2/umd/react.production.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.10.2/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
     <div id="DivBoton1"></div><hr>
@@ -15,23 +13,17 @@
         class ClaseClasica extends React.Component {
             constructor(props) {
                 super(props);
-                this.state = {
-                    cuentaclicks: 0
-                };
+                this.state = {cuentaclicks: 0};
             }
-
             render() {
                 return (
-                    <div>
-                    <p>Has presionado el boton {this.state.cuentaclicks} veces</p>
+                    <div><p>Has presionado el boton {this.state.cuentaclicks} veces</p>
                     <button onClick={() => this.setState({ cuentaclicks: this.state.cuentaclicks + 1 })}>
                         presioname
-                    </button>
-                    </div>
+                    </button></div>
                 );
             }
         }//-------------------------------------------------------
-
         const { useState } = React;
 
         const Controlaclicks = () =>{

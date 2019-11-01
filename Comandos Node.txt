@@ -20,6 +20,11 @@ npx create-react-app primera_app
 --------------------------------------
 
 cd primera_app
+
+--------------------------------------
+npm install --save react@^16.8.0 react-dom@^16.8.0
+--------------------------------------
+
 npm start
 npm run build
 npm test
