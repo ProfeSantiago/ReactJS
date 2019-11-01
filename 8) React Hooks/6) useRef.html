@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.10.2/umd/react.production.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.10.2/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivBoton"></div>
+
+    <script type="text/babel">
+        const { useRef } = React;
+
+        const PoneFoco = () => {
+            const textInput = useRef();
+            const focusTextInput = () => textInput.current.focus();
+
+            return (
+                <div>
+                Nombre:   <input type="text" ref={textInput} /><br/>
+                Telefono: <input type="text" /><br/>
+                <button onClick={focusTextInput}>Enfocar el nombre</button>
+                </div>
+            );
+        }//-------------------------------------------------------
+
+    ReactDOM.render(<PoneFoco />, document.getElementById("DivBoton"));
+    </script>
+</body>
+</html>
