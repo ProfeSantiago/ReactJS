@@ -11,12 +11,12 @@
         const { useRef } = React;
 
         const PoneFoco = () => {
-            const elcampotexto = useRef();
-            const apuntaInputText = () => elcampotexto.current.focus();
+            const refcampotexto = useRef();
+            const apuntaInputText = () => refcampotexto.current.focus();
 
             return (
                 <div>
-                Nombre:   <input type="text" ref={elcampotexto} /><br/>
+                Nombre:   <input type="text" ref={refcampotexto} /><br/>
                 Telefono: <input type="text" /><br/>
                 <button onClick={apuntaInputText}>Enfocar al campo nombre</button>
                 </div>
