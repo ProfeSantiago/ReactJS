@@ -32,21 +32,21 @@
         }
 
         function BarraBotones(props) {
-        return (
-            <div>
-            <BotonConTema />
-            </div>
-        );
+            return (
+                <div>
+                <BotonConTema />
+                </div>
+            );
         }
 
         function BotonConTema() {
-        const eltema = useContext(ContextoTemas);
+            const eltema = useContext(ContextoTemas);
 
-        return (
-            <button style={{ background: eltema.background, color: eltema.foreground }}>
-                Me pusieron bonito con useContext
-            </button>
-        );
+            return (
+                <button style={{ background: eltema.background, color: eltema.foreground }}>
+                    Me pusieron bonito con useContext
+                </button>
+            );
         }//-------------------------------------------------------
 
     ReactDOM.render(<App />, document.getElementById("DivBoton1"));

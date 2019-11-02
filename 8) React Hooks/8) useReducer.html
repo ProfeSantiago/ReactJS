@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.10.2/umd/react.production.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.10.2/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <h3> useReducer es una alternativa a useState pero complejo</h3>
+    <div id="DivHook"></div>
+
+    <script type="text/babel">
+        const { useReducer } = React;
+
+        const estadoInicial = {count: 0};
+
+        function reductor(state, action) {
+            switch (action.type) {
+                case 'incrementar':
+                    return {count: state.count + 1};
+                case 'decrementar':
+                    return {count: state.count - 1};
+                default:
+                    throw new Error();
+            }
+        }
+
+        function Contador() {
+            const [state, dispatch] = useReducer(reductor, estadoInicial);
+            return (
+                <div>
+                Cantidad de Clicks: {state.count}
+                <button onClick={() => dispatch({type: 'decrementar'})}>-</button>
+                <button onClick={() => dispatch({type: 'incrementar'})}>+</button>
+                </div>
+            );
+        }//-------------------------------------------------------
+
+    ReactDOM.render(<Contador />, document.getElementById("DivHook"));
+    </script>
+</body>
+</html>
