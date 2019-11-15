@@ -19,16 +19,14 @@
 
             enciendeApaga() {
                 this.setState(state => ({
-                    estaEncendido: !state.estaEncendido
-                }));
+                    estaEncendido: !state.estaEncendido }));
             }
 
             render() {
                 return (
                 <button onClick={this.enciendeApaga}>
                     {this.state.estaEncendido ? 'Encendido' : 'Apagado'}
-                </button>
-                );
+                </button>);
             }
         }//-------------------------------------------------------
         const { useState } = React;
@@ -37,11 +35,10 @@
             const [estaPrendido, prendeApaga] = useState('Apagado');
 
             return (
-                <button onClick={() => prendeApaga(estaPrendido == 'Apagado' ? 'Encendido' : 'Apagado')}>
+                <button onClick={() =>
+                    prendeApaga(estaPrendido == 'Apagado' ? 'Encendido' : 'Apagado')}>
                     {estaPrendido}
-                </button>
-            );
-
+                </button>);
         }//-------------------------------------------------------
 
         ReactDOM.render(<CambiaBoton />, document.getElementById('DivBoton'));

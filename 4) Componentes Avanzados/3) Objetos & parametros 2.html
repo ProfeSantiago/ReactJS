@@ -11,18 +11,18 @@
         width: 200px;
         height: 250px;
         border: 1px solid black;
-    } 
+    }
 </style>
 </head>
 <body>
     <div id="DivBujo"></div>
-    
+
     <script type="text/babel">
 
         function Componente(props) {
             return (
                 <div class="miBloque">
-                    
+
                     <img
                         src={props.parfoto}
                         alt={props.parnombre}
@@ -36,8 +36,8 @@
 
         class Lienzo extends React.Component {
             DibujaComponentes() {
-                return <Componente parnombre={'Dana Scully'}
-                                   parfoto={'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gillian-anderson-dana-scully-1533814298.jpg?crop=0.75xw:1xh;center,top&resize=100:*'}
+                return <Componente parnombre={'Dana Scully'} 
+                parfoto={'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gillian-anderson-dana-scully-1533814298.jpg?crop=0.75xw:1xh;center,top&resize=100:*'}
                         />;
             }
 
