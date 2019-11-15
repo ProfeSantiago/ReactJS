@@ -1,0 +1,13 @@
+
+cd/
+Mkdir EjemplosRedux
+cd EjemplosRedux
+--------------------------------------
+
+npx create-react-app primer_redux
+--------------------------------------
+cd primer_redux
+--------------------------------------
+npm install --save react@^16.8.0 react-dom@^16.8.0
+npm install react-redux
+--------------------------------------
