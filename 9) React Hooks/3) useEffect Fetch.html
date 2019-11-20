@@ -9,7 +9,7 @@
     <div id="DivClase"></div>
     <div id="DivClase2"></div>
     <div id="DivClase3"></div>
-    
+
     <script type="text/babel">
 
         class ClaseConexion extends React.Component {
@@ -50,7 +50,9 @@
                 escribedatos(datosTemp);
             }
 
-            useEffect(() => {leedatos();}, []);
+            useEffect(() => {
+                leedatos();
+            }, []);
 
             return (
                 <div>
@@ -83,7 +85,7 @@
                 return <div>cargando</div>;
             }
             if (error) {
-                return <div>Error!!</div>;
+                return <div>Peligro Will Robinson!!</div>;
             }
             return (
                 <div>
