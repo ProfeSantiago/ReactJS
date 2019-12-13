@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.10.2/umd/react.production.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.10.2/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivBoton1"></div><hr>
+    <div id="DivBoton2"></div>
+
+    <script type="text/babel">
+
+        class ClaseClasica extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {cuentaclicks: 0};
+            }
+            render() {
+                return (
+                    <div><p>Has presionado el boton {this.state.cuentaclicks} veces</p>
+                    <button onClick={() => this.setState({ cuentaclicks: this.state.cuentaclicks + 1 })}>
+                        presioname
+                    </button></div>
+                );
+            }
+        }//-------------------------------------------------------
+        const { useState } = React;
+
+        const Controlaclicks = () =>{
+            const [losclicks, sumaclicks] = useState(0);
+
+            return (
+            <div>
+                <p>Has presionado el boton {losclicks} veces</p>
+                <button onClick={() => sumaclicks(losclicks + 1)}>
+                        presioname
+                </button>
+            </div>
+            );
+        }//-------------------------------------------------------
+
+    ReactDOM.render(<ClaseClasica />, document.getElementById("DivBoton1"));
+    ReactDOM.render(<Controlaclicks />, document.getElementById("DivBoton2"));
+    </script>
+</body>
+</html>
