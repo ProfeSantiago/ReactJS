@@ -16,7 +16,7 @@ pueden cambiar por la siguiente línea:
 
 npx create-react-app react-firestore
 
-cd react-firestore
+
 
 npm install --save firebase
 npm install --save jquery
