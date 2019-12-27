@@ -13,17 +13,17 @@
         class ActualizaClase extends React.Component {
             constructor() {
                 super();
-                this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
+                this.ActualizacionForzada = this.ActualizacioForzada.bind(this);
             };
 
-            forceUpdateHandler() {
+            ActualizacionForzada() {
                 this.forceUpdate();
             };
 
             render() {
                 return (
                     <div>
-                        <button onClick = {this.forceUpdateHandler}>Actualización Forzada</button>
+                        <button onClick = {this.ActualizacionForzada}>Actualización Forzada</button>
                         <h4>Número Aleatorio: {Math.random()}</h4>
                     </div>
                 );
