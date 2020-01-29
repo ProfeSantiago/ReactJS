@@ -6,9 +6,9 @@
 </head>
 <body>
     <div id="DivFormulario"></div>
-    
+
     <script type="text/babel">
-    
+
         class ClaseHolaUsuario extends React.Component {
             constructor(propiedades) {
                 super(propiedades)
@@ -28,22 +28,20 @@
 
             render() {
                 return (
-                <div> 
+                <div>
                     Digite su nombre: &nbsp;
-                    <input
-                    type="text"
-                    value={this.state.usuario}
-                    onChange={this.CambiaTexto}
+                    <input type="text"
+                        value={this.state.usuario}
+                        onChange={this.CambiaTexto}
                     />
                     <br /><br />
-
                     Bienvenido {this.state.usuario} !!
                 </div>
                 )
             }
 
         }//Fin ClaseHolaUsuario
-        
+
         ReactDOM.render(<ClaseHolaUsuario />, document.getElementById('DivFormulario'));
     </script>
 </body>

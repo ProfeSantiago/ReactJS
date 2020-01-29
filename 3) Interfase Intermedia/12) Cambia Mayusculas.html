@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="DivClase"></div>
-    
+
     <script type="text/babel">
 
         class FormularioReact extends React.Component {
@@ -20,11 +20,11 @@
             cambiaMayus() {
                 const esMayus = this.state.mayuscula;
                 const value = this.inputField.value;
-                
+
                 this.inputField.value = esMayus
                     ? value.toLowerCase()
                     : value.toUpperCase();
-                    
+
                 this.setState({ mayuscula: !esMayus });
             }
 

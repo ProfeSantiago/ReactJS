@@ -6,20 +6,21 @@
 </head>
 <body>
     <div id="DivBoton"></div>
-    
+
     <script type="text/babel">
 
         class BotonControlado extends React.Component {
-            state = { TextoDelBoton: "Dar Clic Porfis" };
+            state = { TextoDelBoton: "Dar Clic Por favor" };
 
-            handleClick= () => {
+            eventoClick= () => {
                 this.setState(() => {
-                    return { TextoDelBoton: "Buenisimo Gracias!!" };
+                    return { TextoDelBoton: "Buenisimo, muchas gracias!!" };
                 });
             }
+
             render() {
                 const { TextoDelBoton } = this.state;
-                return <button onClick={this.handleClick}>{TextoDelBoton}</button>;
+                return <button onClick={this.eventoClick}>{TextoDelBoton}</button>;
             }
         }
 
