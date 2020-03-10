@@ -15,7 +15,7 @@
                 this.state = {Paises: []};
             }
 
-            componentWillMount() {
+            componentDidMount() {
                 fetch('https://restcountries.eu/rest/v2/all')
                     .then((response) => {
                         return response.json()
@@ -24,7 +24,7 @@
                         this.setState({ Paises: JsonPaises })
                 });
             }
-
+            
             render() {
                 const datosPaises = this.state.Paises.map((unPais, i) => (
                     <p>
