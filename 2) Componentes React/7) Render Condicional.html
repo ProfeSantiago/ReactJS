@@ -9,11 +9,11 @@
     
     <script type="text/babel">
 
-        function RenderOpcion1(props) {
+        function RenderOpcion1() {
             return <h1>La Opción #1 fue llamada</h1>;
         }
 
-        function RenderOpcion2(props) {
+        function RenderOpcion2() {
             return <h1>Se llamó la opción #2</h1>;
         }
 
@@ -25,7 +25,7 @@
             return <RenderOpcion2 />;
         }
 
-        ReactDOM.render(<RenderCondicional cual={2} />,
+        ReactDOM.render(<RenderCondicional cual={1} />,
         document.getElementById('DivClase'));
 
     </script>
